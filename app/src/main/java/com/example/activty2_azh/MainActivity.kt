@@ -30,7 +30,8 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background)
                 {
-                    Greeting("Android")
+                    TampilLayar(pesan = getString(R.string.greeting),
+                        dari = getString(R.string.name))
                 }
             }
         }
@@ -69,6 +70,14 @@ fun TampilLayar(pesan: String, dari: String){
             modifier = Modifier
                 .fillMaxSize()
                 .padding(8.dp))
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun GreetingPreview() {
+    Activty2_azhTheme {
+        TampilLayar(pesan = "Selamat Datang", dari ="Di UMY" )
     }
 }
 
